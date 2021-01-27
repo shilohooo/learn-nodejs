@@ -8,7 +8,7 @@
   },
   "description": "NodeJS学习",
   "scripts": {
-    "test": "node ./env/read-env.js",
+    "test": "node src/env/read-env.js",
     "hello": "echo Hello"
   },
   "dependencies": {
