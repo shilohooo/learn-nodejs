@@ -5,7 +5,7 @@
  */
 // 使用fs模块的readFile()方法并传入文件路径，编码，在回调函数中读取文件数据
 const fs = require('fs')
-fs.readFile('../package.json', 'utf-8', (err, data) => {
+fs.readFile('package.json', 'utf-8', (err, data) => {
   if (err) {
     console.error(err)
     return
