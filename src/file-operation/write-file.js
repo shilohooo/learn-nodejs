@@ -4,16 +4,17 @@
  * @date 2021/1/25 9:23
  */
 const fs = require('fs')
+const path = require('path')
 // 最简单的写入文件方式：使用fs模块的writeFile()方法，传入文件路径以及内容
-const text = 'Hello World'
-// fs.writeFile('./test.txt', text, err => {
-//   if (err) {
-//     console.error(err)
-//     return
-//   }
-//   // 文件写入成功
-//   console.log('写入成功')
-// })
+const text = 'Hello World\n'
+fs.writeFile(path.join(__dirname, './test.txt'), text, err => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  // 文件写入成功
+  console.log('写入成功')
+})
 // 同步写入方法writeFileSync()
 // const otherText = 'Hello NodeJS'
 // try {
@@ -41,8 +42,8 @@ const text = 'Hello World'
 
 // 追加内容到文件末尾
 // 相对于添加标志的方式来说，使用appendFile()方法或同步的appendFileSync()方法会更便捷
-const appendData = '追加到文件末尾的内容'
-fs.appendFile('./test.txt', appendData, err => {
+const appendData = '追加到文件末尾的内容123\n'
+fs.appendFile(path.join(__dirname, './test.txt'), appendData, err => {
   if (err) {
     console.error(err)
     return
